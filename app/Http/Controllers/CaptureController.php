@@ -12,8 +12,9 @@ use Mockery\CountValidator\Exception;
 
 class CaptureController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+
 //        dd(Auth::user());
         return Capture::all();
     }
