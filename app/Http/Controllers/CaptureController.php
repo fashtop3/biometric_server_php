@@ -34,7 +34,7 @@ class CaptureController extends Controller
             Capture::create($input);
         }
         catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 400);
+            return response()->json(['error' => $e->getMessage()], 403);
         }
 
         return response()->json(['success'=> "data saved"], 200);
